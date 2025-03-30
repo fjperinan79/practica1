@@ -48,7 +48,7 @@ public class Notas {
     /**
      * Método que comprueba si las notas introducidas están dentro del rango válido (0 a 10).
      */
-    public void comprobarcion() {
+    public void comprobacion() {
         if (uf1 > 10) {
             System.out.println(" nota1 mal introducida");
         } else {
@@ -114,7 +114,7 @@ public class Notas {
     public static void main(String[] args) {
         Notas fc = new Notas();
         fc.IngresaNotas();
-        fc.comprobarcion();
+        fc.comprobacion();
         fc.Calculonotas();
         fc.Mostrar();
         fc.aprobado();
