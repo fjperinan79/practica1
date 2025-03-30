@@ -12,17 +12,17 @@ import java.util.Scanner;
 public class Notas {
 
     /** Nota de la unidad formativa 1 */
-    double uf1;
+    double uf_1;
     /** Nota de la unidad formativa 2 */
-    double uf2;
+    double uf_2;
     /** Nota de la unidad formativa 3 */
-    double uf3;
+    double uf_3;
 
-    /** Acumulado 1 correspondiente al 35% de uf1 */
+    /** Acumulado 1 correspondiente al 35% de uf_1 */
     double acu1;
-    /** Acumulado 2 correspondiente al 35% de uf2 */
+    /** Acumulado 2 correspondiente al 35% de uf_2 */
     double acu2;
-    /** Acumulado 3 correspondiente al 30% de uf3 */
+    /** Acumulado 3 correspondiente al 30% de uf_3 */
     double acu3;
     /** Nota definitiva */
     double def;
@@ -36,32 +36,32 @@ public class Notas {
     public void IngresaNotas() {
         System.out.println("ingrese las notas del estudiante");
         System.out.print("ingrese nota 1: ");
-        uf1 = entrada.nextDouble();
+        uf_1 = entrada.nextDouble();
 
         System.out.print("ingrese nota 2: ");
-        uf2 = entrada.nextDouble();
+        uf_2 = entrada.nextDouble();
 
         System.out.print("ingrese nota 3: ");
-        uf3 = entrada.nextDouble();
+        uf_3 = entrada.nextDouble();
     }
 
     /**
      * Método que comprueba si las notas introducidas están dentro del rango válido (0 a 10).
      */
     public void comprobacion() {
-        if (uf1 > 10) {
+        if (uf_1 > 10) {
             System.out.println(" nota1 mal introducida");
         } else {
             System.out.println(" nota1 correcta");
         }
 
-        if (uf2 > 10) {
+        if (uf_2 > 10) {
             System.out.println(" nota2 mal introducida");
         } else {
             System.out.println(" nota2 correcta");
         }
 
-        if (uf3 > 10) {
+        if (uf_3 > 10) {
             System.out.println(" nota3 mal introducida");
         } else {
             System.out.println(" nota3 correcta");
@@ -72,9 +72,9 @@ public class Notas {
      * Método que calcula la nota definitiva a partir de los acumulados de cada unidad formativa.
      */
     public void Calculonotas() {
-        acu1 = uf1 * 0.35;
-        acu2 = uf2 * 0.35;
-        acu3 = uf3 * 0.30;
+        acu1 = uf_1 * 0.35;
+        acu2 = uf_2 * 0.35;
+        acu3 = uf_3 * 0.30;
         def = acu1 + acu2 + acu3;
     }
 
@@ -83,9 +83,9 @@ public class Notas {
      */
     public void Mostrar() {
         System.out.println(" notas introducidas son:");
-        System.out.println(" nota1 = " + uf1);
-        System.out.println(" nota2 = " + uf2);
-        System.out.println(" nota3 = " + uf3);
+        System.out.println(" nota1 = " + uf_1);
+        System.out.println(" nota2 = " + uf_2);
+        System.out.println(" nota3 = " + uf_3);
         System.out.println(" acumulado 1 = "+ acu1);
         System.out.println(" acumulado 2 = "+ acu2);
         System.out.println(" acumulado 3 = "+ acu3);
